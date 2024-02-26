@@ -16,6 +16,7 @@ public class FaqController {
         this.faqService = faqService;
     }
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping
     public ResponseEntity<MessageResponse> answerQuestion(@RequestBody MessageRequest request){
         String answer = this.faqService.getAnswear(request.message());
