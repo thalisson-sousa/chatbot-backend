@@ -15,7 +15,6 @@ public class FaqService {
     public String getAnswear(String message) {
         String[] words = message.toLowerCase().split("\\s+");
         List wordsList = Arrays.asList(words).stream().map(String::toLowerCase).toList();
-        System.out.println(wordsList);
 
         for (FaqAnswear entry : faqAnswers.getAnswers()) {
             for (String keyword : entry.getKeywords()) {
